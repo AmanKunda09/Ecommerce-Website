@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import SearchIcon from '@mui/icons-material/Search';
 
 const Container=styled.div`
 height: 60px;
@@ -11,6 +12,13 @@ justify-content: space-between;
 `;
 const Left=styled.div`
 flex: 1;`;
+const Language=styled.div`
+font-size: 14px;
+ cursor: pointer; 
+`;
+const SearchContainer =styled.div`
+  border: 1px solid lightgray;
+`
 const Centre=styled.div`
 flex: 1;`;
 const Right=styled.div`
@@ -20,8 +28,14 @@ const Navbar = () => {
   return (
     <Container>
         <Wrapper>
-           <Left>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut ex et, saepe facere quos ducimus dolorem maxime! Provident fugiat magnam, adipisci ducimus eos tempore illo laborum voluptatem praesentium animi.</Left>
-           <Centre>Centre</Centre>
+           <Left><Language>Holla</Language>
+           <SearchContainer>
+            input
+            <SearchIcon/>
+           </SearchContainer>
+           </Left>
+           <Centre>Centre
+           </Centre>
            <Right>Right</Right>
         </Wrapper>
     </Container>
