@@ -35,6 +35,7 @@ z-index: 2;
 const Wrapper=styled.div`
 height: 100%;
 display: flex;
+transition: all 1.5s ease;
 transform: translate(${prop=>prop.slideIndex * -100}vw);
 `;
 const Slide=styled.div`
@@ -96,7 +97,7 @@ const handleClick = (direction) =>{
           {sliderItems.map(item=> (
 
           
-          <Slide bg={item.bg}>
+          <Slide bg={item.bg} key={item.id}>
           <ImgContainer>
           <Image src={item.img}/>
           </ImgContainer>
